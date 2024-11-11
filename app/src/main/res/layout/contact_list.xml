@@ -1,35 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:app="http://schemas.android.com/apk/res-auto"
-  xmlns:tools="http://schemas.android.com/tools"
-  android:layout_width="match_parent"
-  android:layout_height="wrap_content"
-  android:layout_marginTop="5sp"
-  android:background="#2900BCD4"
-  app:layout_marginBaseline="5sp"
-  android:clickable="true">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:background="#2900BCD4"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    android:clickable="true">
 
   <ImageView
-    android:id="@+id/imageView"
-    android:layout_width="wrap_content"
-    android:layout_height="match_parent"
-    android:layout_weight="1"
-    android:src="@drawable/baseline_3p_24"
-    android:tintMode="multiply"
-    android:visibility="visible" />
+      android:id="@+id/imageView"
+      android:layout_width="50dp"
+      android:layout_height="50dp"
+      android:layout_gravity="center_vertical"
+      android:src="@drawable/baseline_3p_24"
+      android:tint="#FFFFFF"
+      android:layout_marginEnd="10dp" />
 
-  <TextView
-    android:id="@+id/textView"
-    android:layout_width="200sp"
-    android:layout_height="wrap_content"
-    android:layout_weight="1"
-    android:gravity="fill"
-    android:text="TextView" />
+  <!-- LinearLayout con chứa tên và số điện thoại -->
+  <LinearLayout
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:layout_weight="1">
+
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tên người liên hệ"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF" />
+
+    <!-- TextView mới cho số điện thoại -->
+    <TextView
+        android:id="@+id/textViewPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="012-345-6789"
+        android:textSize="14sp"
+        android:textColor="#CCCCCC" />
+  </LinearLayout>
 
   <Button
-    android:id="@+id/button"
-    android:layout_width="3dp"
-    android:layout_height="50dp"
-    android:layout_weight="1"
-    android:text="+" />
+      android:id="@+id/button"
+      android:layout_width="50dp"
+      android:layout_height="50dp"
+      android:text="+"
+      android:background="?attr/selectableItemBackground"
+      android:layout_gravity="center_vertical"
+      android:textColor="#FFFFFF" />
 </LinearLayout>
